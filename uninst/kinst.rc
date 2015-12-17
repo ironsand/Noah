@@ -1,0 +1,289 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOG DISCARDABLE  0, 0, 283, 195
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "圧縮解凍ソフト「Noah」のインストール"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    ICON            IDI_NOAH,IDC_STATIC,7,9,20,20,SS_REALSIZEIMAGE
+    LTEXT           "　Noahのご利用ありがとうございます。\n「開始」ボタンを押すと、Noahをこのコンピュータへインストールします。\n「中止」ボタンを押すと作業は行われません。",
+                    IDC_STATIC,32,7,238,28,SS_SUNKEN | WS_TABSTOP
+    DEFPUSHBUTTON   "開始",IDOK,130,42,67,22
+    PUSHBUTTON      "中止",IDCANCEL,201,42,67,21
+    GROUPBOX        "詳細設定（上級者向け）",IDC_STATIC,7,80,269,108
+    CTEXT           "既にお勧めの設定になっておりますので、詳細設定は変更せずとも問題はありません。",
+                    IDC_STATIC,16,91,253,19,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "関連付け：",IDC_STATIC,29,117,31,8
+    CONTROL         "LZH",IDC_LZH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,63,
+                    116,22,10
+    CONTROL         "ZIP",IDC_ZIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,63,
+                    128,20,10
+    CONTROL         "CAB",IDC_CAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,88,
+                    116,25,10
+    CONTROL         "RAR",IDC_RAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,88,
+                    128,24,10
+    CONTROL         "TAR",IDC_TAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,116,
+                    116,24,10
+    CONTROL         "YZ1",IDC_YZ1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,116,
+                    128,21,10
+    CONTROL         "GCA",IDC_GCA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,
+                    116,25,10
+    CONTROL         "ARJ",IDC_ARJ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,
+                    128,24,10
+    CONTROL         "BGA",IDC_BGA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,
+                    116,25,10
+    CONTROL         "ACE",IDC_ACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,
+                    128,24,10
+    CONTROL         "CPT",IDC_CPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,
+                    116,24,10
+    CONTROL         "JAK",IDC_JAK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,
+                    128,23,10
+    CONTROL         "7Z",IDC_7Z,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,228,
+                    116,23,10
+    LTEXT           "シェル拡張：",IDC_STATIC,24,143,36,8
+    CONTROL         "ここに圧縮",IDC_CMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,63,142,47,10
+    CONTROL         "ここに解凍",IDC_MLT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,116,142,47,10
+    LTEXT           "ショートカット：",IDC_STATIC,18,157,42,8
+    CONTROL         "送る",IDC_SND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,63,
+                    156,23,10
+    CONTROL         "デスクトップ",IDC_DSK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,116,156,46,10
+    PUSHBUTTON      "全OFF",IDC_ALL,239,151,24,14
+    LTEXT           "インストール先：",IDC_STATIC,13,172,47,8
+    EDITTEXT        IDC_INSTALLTO,62,171,176,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "指定...",IDC_REF,241,170,22,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON    DISCARDABLE     "del.ico"
+IDI_NOAH                ICON    DISCARDABLE     "..\\noah.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DIR                 "ここで選んだフォルダの下に""Noah""フォルダを作って解凍します。"
+    IDS_BADPATH             "インストール先は「C:\\Noah」のように、ドライブ名まで含めて指定してください。"
+    IDS_COPYFAIL            "ファイルのコピーに失敗しました。インストールできませんでした。"
+    IDS_REGISTFAIL          "登録に失敗しました。アンインストールは手動で行ってください。"
+    IDS_NOAH                "圧縮解凍ソフト Noah"
+    IDS_HELP                "Noah 利用手引書"
+    IDS_UNINSTALLER         "Noah アンインストール"
+    IDS_CALDIX              "DLL自動ダウンロード"
+    IDS_UNINSTOK            "Noahのアンインストールを開始してよろしいですか？"
+    IDS_INSTALLFINISH       "インストール完了しました。"
+    IDS_DLLINST             "Noah本体のインストールを完了しました。次に、Noahの実行に必要な「DLL」を自動ダウンロードしますか？（この作業は後でもできます。）"
+    IDS_UNINSTALLFINISH     "アンインストール完了しました。"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOG DISCARDABLE  0, 0, 283, 177
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Install Noah"
+FONT 9, "MS Sans Serif"
+BEGIN
+    ICON            IDI_NOAH,-1,7,9,20,20,SS_REALSIZEIMAGE
+    LTEXT           " Thank you for downloading Noah!\nClick the button 'Begin' if you are ready to install.\n* Before installation, you should terminate older version Noah.",
+                    -1,32,7,238,28,SS_SUNKEN | WS_TABSTOP
+    DEFPUSHBUTTON   "&Begin",IDOK,130,42,67,22
+    PUSHBUTTON      "&Cancel",IDCANCEL,201,42,67,21
+    GROUPBOX        "Advanced",-1,7,79,269,91
+    LTEXT           "Association:",-1,23,94,41,8
+    CONTROL         "LZH",IDC_LZH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,67,
+                    94,28,10
+    CONTROL         "ZIP",IDC_ZIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,67,
+                    106,26,10
+    CONTROL         "CAB",IDC_CAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,
+                    94,30,10
+    CONTROL         "RAR",IDC_RAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,
+                    106,30,10
+    CONTROL         "TAR",IDC_TAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,
+                    94,29,10
+    CONTROL         "YZ1",IDC_YZ1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,
+                    106,27,10
+    CONTROL         "GCA",IDC_GCA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,154,
+                    94,30,10
+    CONTROL         "ARJ",IDC_ARJ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,154,
+                    106,29,10
+    CONTROL         "BGA",IDC_BGA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,
+                    94,30,10
+    CONTROL         "ACE",IDC_ACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,
+                    106,29,10
+    CONTROL         "CPT",IDC_CPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,
+                    94,29,10
+    CONTROL         "JAK",IDC_JAK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,
+                    106,29,10
+    LTEXT           "Shell Extension:",-1,13,120,51,8
+    CONTROL         "Compress Here",IDC_CMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,67,120,71,10
+    CONTROL         "Extract Here",IDC_MLT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,147,120,66,10
+    LTEXT           "ShortCut:",-1,32,135,32,8
+    CONTROL         "SendTo",IDC_SND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    67,134,44,10
+    CONTROL         "Desktop",IDC_DSK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    122,134,51,10
+    PUSHBUTTON      "all &off",IDC_ALL,244,129,22,14
+    LTEXT           "Install to:",-1,32,150,29,8
+    EDITTEXT        IDC_INSTALLTO,67,149,176,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&ref...",IDC_REF,247,148,20,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DIR                 "Select Target Directory."
+    IDS_BADPATH             "Target Directory must be specified in full path."
+    IDS_COPYFAIL            "Failed To Copy Files. Installation Aborted."
+    IDS_REGISTFAIL          "Failed."
+    IDS_NOAH                "Noah Archiver"
+    IDS_HELP                "Noah Manual"
+    IDS_UNINSTALLER         "Noah Uninstall"
+    IDS_CALDIX              "DLL Download"
+    IDS_UNINSTOK            "Do you want to uninstall Noah?"
+    IDS_INSTALLFINISH       "Finished installing Noah."
+    IDS_DLLINST             "Download DLLs from Internet ? ( You can do this also after installation. )"
+    IDS_UNINSTALLFINISH     "Uninstallation finished."
+END
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

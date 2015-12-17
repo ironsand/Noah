@@ -1,0 +1,13 @@
+LIBRARY NoahXt
+DESCRIPTION "Noah Shell Extension"
+EXPORTS
+	DllCanUnloadNow		private
+	DllGetClassObject	private
+
+	Init				private
+	LoadSE				private
+	SaveSE				private
+	LoadAS				private
+	SaveAS				private
+	LoadASEx			private
+	SaveASEx			private

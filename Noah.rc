@@ -1,0 +1,676 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,1,9,9
+ PRODUCTVERSION 3,1,9,9
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "INTO THE LEGEND\0"
+            VALUE "CompanyName", "kMonos.NET\0"
+            VALUE "FileDescription", "Noah( DnD Melter/Freezer )\0"
+            VALUE "FileVersion", "3.199\0"
+            VALUE "InternalName", "sakasai\0"
+            VALUE "LegalCopyright", "Presented by k.inaba (1998-2010)\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Noah.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Noah\0"
+            VALUE "ProductVersion", "3.199\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CMPCFG DIALOG DISCARDABLE  0, 0, 219, 121
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "圧縮"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "圧縮先フォルダ",IDC_STATIC,7,7,205,43
+    CONTROL         "元のファイルと同じ場所",IDC_DDIR1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,11,20,84,10
+    CONTROL         "指定した場所",IDC_DDIR2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,33,50,10
+    EDITTEXT        IDC_DDIR,63,32,123,12,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "指定",IDC_REF,188,31,19,14,WS_GROUP
+    CONTROL         "圧縮後開く",IDC_ODIR,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,163,18,43,9
+    GROUPBOX        "圧縮形式",IDC_STATIC,7,57,117,57
+    COMBOBOX        IDC_CMPEXT,14,81,34,163,CBS_DROPDOWNLIST | CBS_SORT | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CMPMHD,52,81,65,79,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Noahの動作モード",IDC_STATIC,133,57,79,57
+    CONTROL         "圧縮専用",IDC_MODE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,147,69,39,8
+    CONTROL         "圧縮優先",IDC_MODE2,"Button",BS_AUTORADIOBUTTON,147,79,
+                    38,8
+    CONTROL         "解凍優先",IDC_MODE3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,147,89,39,8
+    CONTROL         "解凍専用",IDC_MODE4,"Button",BS_AUTORADIOBUTTON,147,98,
+                    39,12
+END
+
+IDD_ARCVIEW DIALOG DISCARDABLE  0, 0, 311, 157
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "List1",IDC_FILELIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,22,312,120
+    PUSHBUTTON      "全解凍",IDOK,5,3,26,14
+    PUSHBUTTON      "解凍",IDC_MELTEACH,34,3,19,14
+    PUSHBUTTON      "反転",IDC_SELECTINV,78,3,19,14
+    EDITTEXT        IDC_DDIR,102,3,145,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_REF,249,3,8,14
+    DEFPUSHBUTTON   "表示",IDC_SHOW,56,3,19,14
+    LTEXT           "",IDC_STATUSBAR,0,146,309,11
+END
+
+IDD_MLTCFG DIALOG DISCARDABLE  0, 0, 219, 121
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "解凍"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "解凍先フォルダ",IDC_STATIC,7,7,205,43
+    CONTROL         "書庫と同じ場所",IDC_DDIR1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,20,65,10
+    CONTROL         "指定した場所",IDC_DDIR2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,33,50,10
+    EDITTEXT        IDC_DDIR,63,32,123,12,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "指定",IDC_REF,188,31,19,14,WS_GROUP
+    CONTROL         "解凍後開く",IDC_ODIR,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,163,18,42,8
+    GROUPBOX        "",IDC_STATIC,7,52,205,62
+    CONTROL         "フォルダ自動生成",IDC_MKDIR,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,16,62,63,10
+    CONTROL         "ファイル一つなら作らない",IDC_MKDIR1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,32,73,86,10
+    CONTROL         "フォルダ一つなら作らない",IDC_MKDIR2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,32,84,86,10
+    CONTROL         "末尾の数字は省く",IDC_MKDIR3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,95,64,10
+END
+
+IDD_WINCFG DIALOG DISCARDABLE  0, 0, 219, 121
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Windows拡張"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "関連付け",IDC_STATIC,7,7,205,39
+    CONTROL         "&LZH",IDC_LZH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,
+                    18,23,9
+    CONTROL         "&ZIP",IDC_ZIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,
+                    30,23,10
+    CONTROL         "&CAB",IDC_CAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,
+                    18,26,10
+    CONTROL         "&RAR",IDC_RAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,
+                    30,25,9
+    CONTROL         "&TAR",IDC_TAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,
+                    18,26,10
+    CONTROL         "&YZ1",IDC_YZ1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,
+                    30,23,9
+    CONTROL         "&GCA",IDC_GCA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,97,
+                    18,25,10
+    CONTROL         "AR&J",IDC_ARJ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,97,
+                    30,24,10
+    CONTROL         "&BGA",IDC_BGA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    18,25,9
+    CONTROL         "AC&E",IDC_ACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    30,25,9
+    CONTROL         "C&PT",IDC_CPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,155,
+                    18,26,9
+    CONTROL         "JA&K",IDC_JAK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,155,
+                    30,26,9
+    CONTROL         "&7Z",IDC_7Z,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,
+                    18,23,10
+    PUSHBUTTON      "他",IDC_ASS,190,30,17,14
+    GROUPBOX        "右ドラッグ＆ドロップ",IDC_STATIC,7,51,132,29
+    CONTROL         "ここに圧縮(&H)",IDC_CMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,63,57,10
+    CONTROL         "ここに解凍(&X)",IDC_MLT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,75,63,56,10
+    GROUPBOX        "ショートカット",IDC_STATIC,7,86,132,28
+    CONTROL         "送る(&S)",IDC_SND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,98,37,10
+    CONTROL         "デスクトップ(&D)",IDC_DSK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,75,97,60,10
+    LTEXT           "※ ユーザにadmin権限がないため、関連付けに失敗する可能性があります。",
+                    IDC_NOADMIN,146,57,62,49
+END
+
+IDD_INFCFG DIALOG DISCARDABLE  0, 0, 219, 97
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 9, "Courier New"
+BEGIN
+    ICON            IDI_MAIN,IDC_STATIC,28,21,20,20,SS_REALSIZEIMAGE
+    CTEXT           "Noah 3.199\n\npresented by k.inaba",IDC_STATIC,13,45,53,
+                    36,WS_TABSTOP
+    EDITTEXT        IDC_VERSION,78,7,134,83,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+IDD_PROGRESS DIALOG DISCARDABLE  0, 0, 214, 43
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Extracting..."
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "STOP",IDCANCEL,157,7,50,14
+    CONTROL         "Progress1",IDC_BAR,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,7,25,200,12
+    LTEXT           "",IDC_FNAME,7,7,142,11
+END
+
+IDD_PASSWORD DIALOG DISCARDABLE  0, 0, 206, 64
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Noah"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "Input your password:",IDC_MESSAGE,4,5,196,20
+    EDITTEXT        IDC_EDIT,7,29,194,12,ES_AUTOHSCROLL
+    CONTROL         "Mask",IDC_MASK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,
+                    47,31,10
+    PUSHBUTTON      "OK",IDOK,96,46,50,12
+    PUSHBUTTON      "Cancel",IDCANCEL,149,46,50,12
+END
+
+IDD_ANYASS DIALOG DISCARDABLE  0, 0, 207, 97
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "その他の形式の関連づけ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LISTBOX         IDC_NASSOC,7,7,77,62,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "追加 >>",IDC_ADD,90,18,26,14
+    LISTBOX         IDC_ASSOC,123,7,77,62,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<< 削除",IDC_DEL,90,38,27,14
+    DEFPUSHBUTTON   "実行",IDOK,95,76,50,14
+    PUSHBUTTON      "中断",IDCANCEL,150,76,50,14
+END
+
+IDD_PATHCHECK DIALOG DISCARDABLE  0, 0, 298, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Noah 警告"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    PUSHBUTTON      "はい(&Y)",IDYES,111,48,50,14
+    PUSHBUTTON      "中止(&C)",ID_ALLNO,241,48,50,14
+    LTEXT           "絶対パス、もしくは "".."" による相対パスで格納されたファイルです。展開を続けますか？",
+                    IDC_STATIC,7,7,264,10
+    LTEXT           "",IDC_PATHNAME,16,17,275,23
+    PUSHBUTTON      "全てはい(&A)",ID_ALLYES,166,48,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CMPCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_ARCVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 304
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_MLTCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_WINCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_INFCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 36
+    END
+
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_ANYASS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_PATHCHECK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON    DISCARDABLE     "noah.ico"
+IDI_B2E                 ICON    DISCARDABLE     "b2e.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "F",            IDA_MYDIR,              VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          IDA_HELP,               VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      MOVEABLE PURE   "manifest.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_ERROR             "解凍できませんでした！\n書庫ではないか、壊れています。"
+    IDS_C_ERROR             "対応していない圧縮形式に設定されています。\nNoahの設定を変更するか、適切なDLL等をインストールして下さい。"
+    IDS_CHOOSEDIR           "出力先を選んで下さい。"
+    IDS_FNAME               "ファイル名"
+    IDS_SIZE                "サイズ"
+    IDS_DATETIME            "日時"
+    IDS_RATIO               "圧縮率"
+    IDS_METHOD              "形式"
+    IDS_PATH                "パス"
+    IDS_EXECUTING           "Noahから起動したソフトが実行中です。このまま終わるとディスクに不要なファイルが残る可能性が大きいですが、終了しますか？"
+    IDS_NOLIST              "エラー：リストアップ不可能な書庫です。"
+    IDS_ARCVIEW_MSG         "[%d個のファイル] [圧縮率 %d%%] [%s]"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ARCVIEW DIALOG DISCARDABLE  0, 0, 353, 155
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+FONT 9, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_FILELIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,0,20,350,126
+    PUSHBUTTON      "Extract &All",IDOK,7,3,36,14
+    PUSHBUTTON      "E&xtract",IDC_MELTEACH,46,3,26,14
+    PUSHBUTTON      "&Inv",IDC_SELECTINV,97,3,19,14
+    EDITTEXT        IDC_DDIR,119,3,149,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_REF,273,3,13,14
+    DEFPUSHBUTTON   "&View",IDC_SHOW,75,3,19,14
+END
+
+IDD_WINCFG DIALOG DISCARDABLE  0, 0, 219, 121
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Windows"
+FONT 9, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Association",IDC_STATIC,7,7,205,36
+    CONTROL         "&LZH",IDC_LZH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    18,28,10
+    CONTROL         "&ZIP",IDC_ZIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    28,26,10
+    CONTROL         "&CAB",IDC_CAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,
+                    18,30,10
+    CONTROL         "&RAR",IDC_RAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,
+                    28,30,10
+    CONTROL         "&TAR",IDC_TAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,
+                    18,29,10
+    CONTROL         "&YZ1",IDC_YZ1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,
+                    28,27,10
+    CONTROL         "&GCA",IDC_GCA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,99,
+                    18,30,10
+    CONTROL         "AR&J",IDC_ARJ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,99,
+                    28,29,10
+    CONTROL         "&BGA",IDC_BGA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,
+                    18,30,10
+    CONTROL         "AC&E",IDC_ACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,
+                    28,29,10
+    CONTROL         "C&PT",IDC_CPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,
+                    18,29,10
+    CONTROL         "JA&K",IDC_JAK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,
+                    28,29,10
+    CONTROL         "&7Z",IDC_7Z,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,188,
+                    18,21,10
+    GROUPBOX        "D&&D Shell Extension",IDC_STATIC,7,47,205,31
+    CONTROL         "Compress &Here",IDC_CMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,61,65,10
+    CONTROL         "E&xpand Here",IDC_MLT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,85,61,72,10
+    GROUPBOX        "Shortcut",IDC_STATIC,7,84,205,30
+    CONTROL         "&SendTo",IDC_SND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    14,96,56,10
+    CONTROL         "&Desktop",IDC_DSK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    85,95,60,10
+    PUSHBUTTON      "...",IDC_ASS,193,31,13,9
+END
+
+IDD_MLTCFG DIALOG DISCARDABLE  0, 0, 219, 121
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Extract"
+FONT 9, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Destination Folder",IDC_STATIC,7,7,205,43
+    CONTROL         "Archive's Folder",IDC_DDIR1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,20,126,10
+    CONTROL         "",IDC_DDIR2,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,11,
+                    33,10,8
+    EDITTEXT        IDC_DDIR,23,32,167,12,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "...",IDC_REF,194,31,13,14,WS_GROUP
+    CONTROL         "Open",IDC_ODIR,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,163,18,42,10
+    GROUPBOX        "",IDC_STATIC,7,52,205,62
+    CONTROL         "Create Directory",IDC_MKDIR,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,16,62,183,10
+    CONTROL         "Not create when only 1 file is contained",IDC_MKDIR1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,73,170,10
+    CONTROL         "Not create when only 1 folder is contained",IDC_MKDIR2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,84,173,10
+    CONTROL         "Omit trail numbers",IDC_MKDIR3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,95,169,10
+END
+
+IDD_CMPCFG DIALOG DISCARDABLE  0, 0, 219, 121
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Compress"
+FONT 9, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Destination Folder",IDC_STATIC,7,7,205,43
+    CONTROL         "Source's Folder",IDC_DDIR1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,20,122,10
+    CONTROL         "",IDC_DDIR2,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,11,
+                    33,8,10
+    EDITTEXT        IDC_DDIR,23,32,167,12,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "...",IDC_REF,194,31,13,14,WS_GROUP
+    CONTROL         "Open",IDC_ODIR,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,163,18,43,9
+    GROUPBOX        "Method",IDC_STATIC,7,57,117,57
+    COMBOBOX        IDC_CMPEXT,13,81,33,163,CBS_DROPDOWNLIST | CBS_SORT | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CMPMHD,49,81,66,79,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Which-To-Do",IDC_STATIC,133,57,79,57
+    CONTROL         "Compress Only",IDC_MODE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,145,69,61,10
+    CONTROL         "mode-1",IDC_MODE2,"Button",BS_AUTORADIOBUTTON,145,79,59,
+                    10
+    CONTROL         "mode-2",IDC_MODE3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,145,89,60,10
+    CONTROL         "Extract Only",IDC_MODE4,"Button",BS_AUTORADIOBUTTON,145,
+                    99,60,10
+END
+
+IDD_ANYASS DIALOG DISCARDABLE  0, 0, 207, 97
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Other Format Association"
+FONT 9, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_NASSOC,7,7,77,62,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add >>",IDC_ADD,88,18,30,14
+    LISTBOX         IDC_ASSOC,123,7,77,62,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<< &Del",IDC_DEL,88,38,30,14
+    DEFPUSHBUTTON   "Execute",IDOK,95,76,50,14
+    PUSHBUTTON      "Abort",IDCANCEL,150,76,50,14
+END
+
+IDD_PATHCHECK DIALOG DISCARDABLE  0, 0, 298, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Noah Warning"
+FONT 9, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Yes",IDYES,111,48,50,14
+    LTEXT           "Contains absolute path or parent path "".."". Do you really want to extrace this file?",
+                    IDC_STATIC,7,7,270,10
+    LTEXT           "",IDC_PATHNAME,16,17,275,23
+    PUSHBUTTON      "Yes to &All",ID_ALLYES,165,48,50,14
+    PUSHBUTTON      "&Cancel",ID_ALLNO,241,48,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ARCVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 350
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_WINCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_MLTCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_CMPCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_ANYASS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_PATHCHECK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_M_ERROR             "Can't extract !\nIt's a non-archive file or a broken archive."
+    IDS_C_ERROR             "Unsupported compression method !\nMaybe because of the lack of DLL."
+    IDS_CHOOSEDIR           "Choose a destination folder."
+    IDS_FNAME               "NAME"
+    IDS_SIZE                "SIZE"
+    IDS_DATETIME            "TIME"
+    IDS_RATIO               "RATIO"
+    IDS_METHOD              "METHOD"
+    IDS_PATH                "PATH"
+    IDS_EXECUTING           "Application launched from Noah is living. Do you really want to close?"
+    IDS_NOLIST              "Error: Can't ListUp The Contents of this Archive."
+    IDS_ARCVIEW_MSG         "[%d files] [Ratio: %d%%] [%s]"
+END
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

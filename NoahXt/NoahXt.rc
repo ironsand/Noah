@@ -1,0 +1,84 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// “ú–{Œê resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LZH                 ICON    DISCARDABLE     "icon\\arc_lzh.ico"
+IDI_ZIP                 ICON    DISCARDABLE     "icon\\arc_zip.ico"
+IDI_CAB                 ICON    DISCARDABLE     "icon\\arc_cab.ico"
+IDI_RAR                 ICON    DISCARDABLE     "icon\\arc_rar.ico"
+IDI_TAR                 ICON    DISCARDABLE     "icon\\arc_tar.ico"
+IDI_YZ1                 ICON    DISCARDABLE     "icon\\arc_yz1.ico"
+IDI_GCA                 ICON    DISCARDABLE     "icon\\arc_gca.ico"
+IDI_ARJ                 ICON    DISCARDABLE     "icon\\arc_arj.ico"
+IDI_BGA                 ICON    DISCARDABLE     "icon\\arc_bga.ico"
+IDI_ACE                 ICON    DISCARDABLE     "icon\\arc_ace.ico"
+IDI_OTH                 ICON    DISCARDABLE     "icon\\arc_oth.ico"
+IDI_JAK                 ICON    DISCARDABLE     "icon\\arc_jak.ico"
+IDI_7Z                  ICON    DISCARDABLE     "icon\\arc_7z.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // “ú–{Œê resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

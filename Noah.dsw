@@ -1,0 +1,65 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# åxçê: Ç±ÇÃ‹∞∏ΩÕﬂ∞Ω Ãß≤Ÿ Çï“èWÇ‹ÇΩÇÕçÌèúÇµÇ»Ç¢Ç≈Ç≠ÇæÇ≥Ç¢!
+
+###############################################################################
+
+Project: "Noah"=.\Noah.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    Noah
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "NoahXt"=.\NoahXt\NoahXt.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    NoahXt
+    .\noahxt
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "kinst"=.\uninst\kinst.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    kinst
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+
